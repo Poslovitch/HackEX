@@ -1,5 +1,5 @@
-#include "terminal\dialog.hpp"
+#include "HackEX\terminal\dialog.hpp"
 
 class CfgFunctions {
-  #include "HKX_cfgFunctions.hpp"
+  #include "HackEX\HKX_cfgFunctions.hpp"
 }

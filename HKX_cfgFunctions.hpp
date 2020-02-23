@@ -2,7 +2,7 @@ class HackEX {
   tag = "HKX";
 
   class Terminal {
-    file = "terminal";
+    file = "HackEX\terminal";
 
     class getTerminal {};
     class addActionTerminal {};
@@ -12,7 +12,8 @@ class HackEX {
   };
 
   class CommandLine {
-    file = "command_line";
+    file = "HackEX\command_line";
+    
     class print {};
     class printf {};
     class initCLSession {};
@@ -22,13 +23,13 @@ class HackEX {
   };
 
   class CommandLineCommand {
-    file = "command_line\commands"
+    file = "HackEX\command_line\commands"
 
     class clCmdHelp {};
   };
 
   class Input {
-    file = "input";
+    file = "HackEX\input";
 
     class dikToChar {};
   }
