@@ -6,6 +6,7 @@ _cmd = toLower _cmd;
 _terminal set [6, ""]; // Reset the command line
 
 switch (_cmd) do {
+  case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
   case "uname": {[_terminal] call HKX_fnc_clCmdUname;};
   case "trigger": {[_terminal] call HKX_fnc_clCmdTrigger;};
   default {
