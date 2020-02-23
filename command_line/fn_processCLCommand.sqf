@@ -6,6 +6,7 @@ _cmd = toLower _cmd;
 _terminal set [6, ""]; // Reset the command line
 
 switch (_cmd) do {
+  case "man";
   case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
   case "uname": {[_terminal, "Linux 4.2.27-23-generic-pae"] call HKX_fnc_printf;};
   case "trigger": {
@@ -18,6 +19,6 @@ switch (_cmd) do {
   };
   default {
     // Unknown command
-    [_terminal, "Error: Unknown command. Type HELP to display a list of available commands."] call HKX_fnc_printf;
+    [_terminal, "Error: Unknown command. Type HELP or MAN to display a list of available commands."] call HKX_fnc_printf;
   };
 };
