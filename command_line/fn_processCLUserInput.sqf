@@ -3,7 +3,7 @@ params["_terminal", "_input"];
 switch(_input) do {
   case "@ENTER": {
     [_terminal, endl] call HKX_fnc_printf;
-    [_terminal, (_terminal select 3) + "> " + (_terminal select 6)] call HKX_fnc_printf;
+    [_terminal, (_terminal select 3) + "@" + (_terminal select 1) + "> " + (_terminal select 6)] call HKX_fnc_printf;
 
     [_terminal] call HKX_fnc_processCLCommand;
     [_terminal] call HKX_fnc_updateCLDisplay;
