@@ -1,0 +1,5 @@
+#include "terminal\dialog.hpp"
+
+class CfgFunctions {
+  #include "HKX_cfgFunctions.hpp"
+}
