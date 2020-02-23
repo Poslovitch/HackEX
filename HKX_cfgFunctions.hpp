@@ -25,8 +25,6 @@ class HackEX {
     file = "command_line\commands"
 
     class clCmdHelp {};
-    class clCmdUname {};
-    class clCmdTrigger {};
   };
 
   class Input {

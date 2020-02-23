@@ -7,8 +7,11 @@ _terminal set [6, ""]; // Reset the command line
 
 switch (_cmd) do {
   case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
-  case "uname": {[_terminal] call HKX_fnc_clCmdUname;};
-  case "trigger": {[_terminal] call HKX_fnc_clCmdTrigger;};
+  case "uname": {[_terminal, "Linux 4.2.27-23-generic-pae"] call HKX_fnc_printf;};
+  case "trigger": {
+    (_terminal select 0) setVariable ["HKX_trigger", true];
+    [_terminal, "Successfully toggled on Switch #42251"] call HKX_fnc_printf;
+  };
   default {
     // Unknown command
     [_terminal, "Error: Unknown command. Type HELP to display a list of available commands."] call HKX_fnc_printf;
