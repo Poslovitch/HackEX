@@ -18,3 +18,4 @@ _index = _accounts findIf {(_x select 0) == _user};
 [_terminal, "  - CLEAR: clears the screen"] call HKX_fnc_printf;
 [_terminal, "  - TRIGGER: makes something go BOOM"] call HKX_fnc_printf;
 [_terminal, "  - LS: lists files in the current directory"] call HKX_fnc_printf;
+[_terminal, "  - CAT <filename>: opens the specified file"] call HKX_fnc_printf;

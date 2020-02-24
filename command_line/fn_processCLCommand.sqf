@@ -73,6 +73,22 @@ switch (_cmd) do {
       };
     } forEach _files;
   };
+  case "cat": {
+    if (count _params == 1) then {
+      _filename = _params select 0;
+      _files = _terminal select 7;
+
+      private _index = _files findIf {_x select 0 == _filename};
+      if (_index != -1) then {
+        _file = _files select _index;
+        [_terminal, _file select 2] call HKX_fnc_printf;
+      } else {
+        [_terminal, "Error: Unknown file."]
+      };
+    } else {
+      [_terminal, "Error: Please provide a file name."] call HKX_fnc_printf;
+    };
+  };
   default {
     // Unknown command
     [_terminal, "Error: Unknown command. Type HELP or MAN to display a list of available commands."] call HKX_fnc_printf;
