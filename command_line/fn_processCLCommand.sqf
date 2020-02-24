@@ -40,6 +40,10 @@ switch (_cmd) do {
       };
     };
   };
+  case "logout": {
+    _terminal set [5, ""]; // Clear the display
+    [_terminal] call HKX_fnc_initCLSession;
+  };
   default {
     // Unknown command
     [_terminal, "Error: Unknown command. Type HELP or MAN to display a list of available commands."] call HKX_fnc_printf;
