@@ -1,4 +1,6 @@
-# Installation
+# HackEx version 0.0.4-dev
+
+## Installation
 
 Ajouter au description.ext :
 ```
