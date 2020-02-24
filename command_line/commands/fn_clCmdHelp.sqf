@@ -10,8 +10,9 @@ _accounts = _terminal select 2;
 _index = _accounts findIf {(_x select 0) == _user};
 
 [_terminal, "Available commands [CLEARANCE LEVEL " + str (_accounts select _index select 2) + "]:"] call HKX_fnc_printf;
-[_terminal, "  - HELP/MAN: displays available commands"] call HKX_fnc_printf;
+[_terminal, "  - HELP: displays available commands"] call HKX_fnc_printf;
+[_terminal, "  - MAN: displays available commands"] call HKX_fnc_printf;
 [_terminal, "  - LOGIN <username> <password>: logs in the account"] call HKX_fnc_printf;
 [_terminal, "  - UNAME: displays Linux Kernel version information"] call HKX_fnc_printf;
 [_terminal, "  - CLEAR: clears the screen"] call HKX_fnc_printf;
-[_terminal, "  - TRIGGER: makes something go BOOM."] call HKX_fnc_printf;
+[_terminal, "  - TRIGGER: makes something go BOOM"] call HKX_fnc_printf;
