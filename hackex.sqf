@@ -1,5 +1,5 @@
 /*
-        HackEX v0.0.3 (Released on 24/02/2020)
+        HackEX v0.0.4-dev
         Made by Poslovitch [https://github.com/Poslovitch].
 */
 
