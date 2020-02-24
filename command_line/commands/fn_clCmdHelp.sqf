@@ -13,7 +13,7 @@ _index = _accounts findIf {(_x select 0) == _user};
 [_terminal, "  - HELP: displays available commands"] call HKX_fnc_printf;
 [_terminal, "  - MAN: displays available commands"] call HKX_fnc_printf;
 [_terminal, "  - LOGIN <username> <password>: logs in the account"] call HKX_fnc_printf;
-[_terminal, "  - LOGOUT: logs out of the account and initialize a new guest session"] call HKX_fnc_printf;
+[_terminal, "  - LOGOUT: logs out of the account and creates a new guest session"] call HKX_fnc_printf;
 [_terminal, "  - UNAME: displays Linux Kernel version information"] call HKX_fnc_printf;
 [_terminal, "  - CLEAR: clears the screen"] call HKX_fnc_printf;
 [_terminal, "  - TRIGGER: makes something go BOOM"] call HKX_fnc_printf;
