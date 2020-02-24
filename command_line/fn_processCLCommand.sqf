@@ -24,23 +24,31 @@ switch (_cmd) do {
     [_terminal] call HKX_fnc_updateCLDisplay;
   };
   case "login": {
-    private _username = _params select 0;
-    private _password = _params select 1;
+    if ((count _params) == 2) then { // Make sure the user provided both username and password.
+      private _username = _params select 0;
+      private _password = _params select 1;
 
-    _accounts = _terminal select 2;
-    private _index = _accounts findIf {(_x select 0) == _username};
-    if (_index == -1) then {
-      [_terminal, "Invalid credentials."] call HKX_fnc_printf;
-    } else {
-      private _account = _accounts select _index;
-      _pwd = _account select 1;
-      if (_password == _pwd) then {
-        _terminal set [5, ""]; // Clear the display
-        _terminal set [3, _account select 0];
-        [_terminal, "Logged in as " + _username + "."] call HKX_fnc_printf;
+      _accounts = _terminal select 2;
+      private _index = _accounts findIf {(_x select 0) == _username};
+      if (_index == -1) then {
+        [_terminal, "Error: Invalid credentials."] call HKX_fnc_printf;
       } else {
-        [_terminal, "Invalid credentials."] call HKX_fnc_printf;
+        private _account = _accounts select _index; // Get the account the user is trying to log into.
+        if ((_terminal select 3) != (_account select 0)) then { // Make sure the account is different from the current one.
+          _pwd = _account select 1;
+          if (_password == _pwd) then {
+            _terminal set [5, ""]; // Clear the display
+            _terminal set [3, _account select 0];
+            [_terminal, "Logged in as " + _username + "."] call HKX_fnc_printf;
+          } else {
+            [_terminal, "Error: Invalid credentials."] call HKX_fnc_printf;
+          };
+        } else {
+          [_terminal, "Error: Already logged into requested account."] call HKX_fnc_printf;
+        };
       };
+    } else {
+      [_terminal, "Error: Please provide a username and a password."] call HKX_fnc_printf;
     };
   };
   case "logout": {
