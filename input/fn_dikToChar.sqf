@@ -6,6 +6,7 @@ switch(_dikCode) do {
   // Special handling
   case 1: {_char = "@ESC";};
   case 14: {_char = "@BACKSPACE";};
+  //case 15: {_char = "@TAB";}; // Tab = 4 spaces
   case 28: {_char = "@ENTER";};
   case 156: {_char = "@ENTER";};
 
@@ -94,7 +95,6 @@ switch(_dikCode) do {
       _char = "=";
     };
   };
-  case 15: {_char = "    ";}; // Tab = 4 spaces
   case 26: {
     if (_shift) then {
       _char = "¨";
