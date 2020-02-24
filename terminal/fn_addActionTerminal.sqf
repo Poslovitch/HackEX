@@ -26,4 +26,4 @@ _terminal,
 _duration,
 0,
 false                                                     // We want to keep the action available
-] remoteExec ["BIS_fnc_holdActionAdd", 0, _terminal];
+] remoteExec ["BIS_fnc_holdActionAdd", 0];
