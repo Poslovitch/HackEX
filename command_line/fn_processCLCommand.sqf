@@ -33,6 +33,7 @@ switch (_cmd) do {
       private _account = _accounts select _index;
       _pwd = _account select 1;
       if (_password == _pwd) then {
+        _terminal set [5, ""]; // Clear the display
         _terminal set [3, _account select 0];
         [_terminal, "Logged in as " + _username + "."] call HKX_fnc_printf;
       } else {
