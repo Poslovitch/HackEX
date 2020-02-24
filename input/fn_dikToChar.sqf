@@ -29,7 +29,7 @@ switch(_dikCode) do {
     if (_shift) then {
       _char = "3";
     } else {
-      _char = "''";
+      _char = """";
     };
   };
   case 5: {
