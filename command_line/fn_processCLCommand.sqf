@@ -51,6 +51,7 @@ switch (_cmd) do {
       [_terminal, "Error: Please provide a username and a password."] call HKX_fnc_printf;
     };
   };
+  case "exit";
   case "logout": {
     _currentAccount = _terminal select 3;
     if (!("guest" in _currentAccount)) then {
