@@ -60,6 +60,19 @@ switch (_cmd) do {
       [_terminal, "Error: Not logged into any account."] call HKX_fnc_printf;
     };
   };
+  case "ls": {
+    _files = _terminal select 7;
+    _accounts = _terminal select 2;
+    private _account = _accounts select (_accounts findIf {(_x select 0) == (_terminal select 3)}); // Get the account the user is trying to log into.
+    private _accountClearance = _account select 2;
+    {
+      _fileClearance = _x select 1;
+      if (_accountClearance >= _fileClearance) then {
+        _name = _x select 0;
+        [_terminal, "    " + _name] call HKX_fnc_print;
+      };
+    } forEach _files;
+  };
   default {
     // Unknown command
     [_terminal, "Error: Unknown command. Type HELP or MAN to display a list of available commands."] call HKX_fnc_printf;
