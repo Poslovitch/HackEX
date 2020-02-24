@@ -13,7 +13,7 @@ class HackEX {
 
   class CommandLine {
     file = "HackEX\command_line";
-    
+
     class print {};
     class printf {};
     class initCLSession {};
@@ -32,5 +32,11 @@ class HackEX {
     file = "HackEX\input";
 
     class dikToChar {};
+  }
+
+  class File {
+    file = "HackEX\file";
+
+    class openFile {};
   }
 }

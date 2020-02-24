@@ -75,16 +75,7 @@ switch (_cmd) do {
   };
   case "cat": {
     if (count _params == 1) then {
-      _filename = _params select 0;
-      _files = _terminal select 7;
-
-      private _index = _files findIf {_x select 0 == _filename};
-      if (_index != -1) then {
-        _file = _files select _index;
-        [_terminal, _file select 2] call HKX_fnc_printf;
-      } else {
-        [_terminal, "Error: Unknown file."]
-      };
+      [_terminal, _params select 0] call HKX_fnc_openFile;
     } else {
       [_terminal, "Error: Please provide a file name."] call HKX_fnc_printf;
     };
