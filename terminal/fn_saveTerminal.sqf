@@ -8,3 +8,4 @@ _target setVariable ["HKX_varTerminal_currentAccount", _terminal select 3];
 _target setVariable ["HKX_varTerminal_state", _terminal select 4];
 _target setVariable ["HKX_varTerminal_commandLineStorage", _terminal select 5];
 _target setVariable ["HKX_varTerminal_commandLineInput", _terminal select 6];
+_target setVariable ["HKX_varTerminal_files", _terminal select 7];
