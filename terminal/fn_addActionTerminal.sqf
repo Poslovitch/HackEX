@@ -18,7 +18,7 @@ _terminal,
 "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 "_this distance _target < 2",
 "_caller distance _target < 2",
-{_caller action ["SwitchWeapon", _caller, _caller, 100]},	// Make the player put its weapon in its back when starting to hack
+{},
 {},
 { [_target, _caller] call HKX_fnc_openTerminal },				          // Open the terminal
 {},
