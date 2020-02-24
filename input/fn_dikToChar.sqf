@@ -10,30 +10,156 @@ switch(_dikCode) do {
   case 156: {_char = "@ENTER";};
 
   // Special characters
-  case 2: {_char = "&";};
-  case 3: {_char = "é";};
-  case 4: {_char = "''";};
-  case 5: {_char = "'";};
-  case 6: {_char = "(";};
-  case 7: {_char = "-";};
-  case 8: {_char = "è";};
-  case 9: {_char = "_";};
-  case 10: {_char = "ç";};
-  case 11: {_char = "à";};
-  case 12: {_char = ")";};
-  case 13: {_char = "=";};
+  case 2: {
+    if (_shift) then {
+      _char = "1";
+    } else {
+      _char = "&";
+    };
+  };
+  case 3: {
+    if (_shift) then {
+      _char = "2";
+    } else {
+      _char = "é";
+    };
+  };
+  case 4: {
+    if (_shift) then {
+      _char = "3";
+    } else {
+      _char = "''";
+    };
+  };
+  case 5: {
+    if (_shift) then {
+      _char = "4";
+    } else {
+      _char = "'";
+    };
+  };
+  case 6: {
+    if (_shift) then {
+      _char = "5";
+    } else {
+      _char = "(";
+    };
+  };
+  case 7: {
+    if (_shift) then {
+      _char = "6";
+    } else {
+      _char = "-";
+    };
+  };
+  case 8: {
+    if (_shift) then {
+      _char = "7";
+    } else {
+      _char = "è";
+    };
+  };
+  case 9: {
+    if (_shift) then {
+      _char = "8";
+    } else {
+      _char = "_";
+    };
+  };
+  case 10: {
+    if (_shift) then {
+      _char = "9";
+    } else {
+      _char = "ç";
+    };
+  };
+  case 11: {
+    if (_shift) then {
+      _char = "0";
+    } else {
+      _char = "à";
+    };
+  };
+  case 12: {
+    if (_shift) then {
+      _char = "°";
+    } else {
+      _char = ")";
+    };
+  };
+  case 13: {
+    if (_shift) then {
+      _char = "+";
+    } else {
+      _char = "=";
+    };
+  };
   case 15: {_char = "    ";}; // Tab = 4 spaces
-  case 26: {_char = "^";};
-  case 27: {_char = "$";};
-  case 40: {_char = "ù";};
+  case 26: {
+    if (_shift) then {
+      _char = "¨";
+    } else {
+      _char = "^";
+    };
+  };
+  case 27: {
+    if (_shift) then {
+      _char = "£";
+    } else {
+      _char = "$";
+    };
+  };
+  case 40: {
+    if (_shift) then {
+      _char = "%";
+    } else {
+      _char = "ù";
+    };
+  };
   case 41: {_char = "²";};
-  case 43: {_char = "*";};
-  case 50: {_char = ",";};
-  case 51: {_char = ";";};
-  case 52: {_char = ":";};
-  case 53: {_char = "!";};
+  case 43: {
+    if (_shift) then {
+      _char = "µ";
+    } else {
+      _char = "*";
+    };
+  };
+  case 50: {
+    if (_shift) then {
+      _char = "?";
+    } else {
+      _char = ",";
+    };
+  };
+  case 51: {
+    if (_shift) then {
+      _char = ".";
+    } else {
+      _char = ";";
+    };
+  };
+  case 52: {
+    if (_shift) then {
+      _char = "/";
+    } else {
+      _char = ":";
+    };
+  };
+  case 53: {
+    if (_shift) then {
+      _char = "§";
+    } else {
+      _char = "!";
+    };
+  };
   case 57: {_char = " ";};
-  case 86: {_char = "<";};
+  case 86: {
+    if (_shift) then {
+      _char = ">";
+    } else {
+      _char = "<";
+    };
+  };
 
   // Actual letters
   case 16: {_char = "a";};
@@ -81,6 +207,10 @@ switch(_dikCode) do {
   case 181: {_char = "/";};
 
   default {_char = "";};
+};
+
+if (_shift and _dikCode >= 16 and _dikCode <= 49) then {
+  _char = toUpper _char;
 };
 
 _char;
