@@ -23,6 +23,7 @@ switch (_cmd) do {
     _terminal set [5, ""]; // Clear the display
     [_terminal] call HKX_fnc_updateCLDisplay;
   };
+  case "su";
   case "login": {
     if ((count _params) == 2) then { // Make sure the user provided both username and password.
       private _username = _params select 0;
