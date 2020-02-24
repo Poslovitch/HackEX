@@ -10,6 +10,8 @@ private _params = _input;
 _terminal set [6, ""]; // Reset the command line
 
 switch (_cmd) do {
+  case "?";
+  case "h";
   case "man";
   case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
   case "uname": {[_terminal, "Linux 4.2.27-23-generic-pae"] call HKX_fnc_printf;};
