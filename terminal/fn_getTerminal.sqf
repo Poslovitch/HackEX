@@ -8,10 +8,8 @@
 params ["_target"];
 
 // Init the various variables
-_randomGuestNumber = str round (random 9999);
-
-private _registeredAccounts = _target getVariable ["HKX_varTerminal_registeredAccounts", [["root", "password", 7], ["guest" + _randomGuestNumber, "", 0]]]; // Users registered on this terminal.
-private _currentAccount = _target getVariable ["HKX_varTerminal_currentAccount", "guest" + _randomGuestNumber];        // User logged in (UserID or Guest if none is logged in).
+private _registeredAccounts = _target getVariable ["HKX_varTerminal_registeredAccounts", [["root", "password", 7]]]; // Users registered on this terminal.
+private _currentAccount = _target getVariable ["HKX_varTerminal_currentAccount", ""];        // User logged in (username or empty if none is logged in).
 private _name = _target getVariable ["HKX_varTerminal_name", "corpcmp_" + str round (random 99999)]; // Name of the terminal (used in display).
 private _state = "COMMAND_LINE";
 private _commandLineStorage = _target getVariable ["HKX_varTerminal_commandLineStorage", ""]; // Content displayed by the terminal in COMMAND_LINE mode.
