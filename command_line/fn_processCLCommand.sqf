@@ -69,7 +69,7 @@ switch (_cmd) do {
       _fileClearance = _x select 1;
       if (_accountClearance >= _fileClearance) then {
         _name = _x select 0;
-        [_terminal, "    " + _name] call HKX_fnc_print;
+        [_terminal, _name] call HKX_fnc_printf;
       };
     } forEach _files;
   };
