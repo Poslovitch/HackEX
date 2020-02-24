@@ -42,8 +42,13 @@ switch (_cmd) do {
     };
   };
   case "logout": {
-    _terminal set [5, ""]; // Clear the display
-    [_terminal] call HKX_fnc_initCLSession;
+    _currentAccount = _terminal select 3;
+    if (!("guest" in _currentAccount)) then {
+      _terminal set [5, ""]; // Clear the display
+      [_terminal] call HKX_fnc_initCLSession;
+    } else {
+      [_terminal, "Error: Not logged into any account."] call HKX_fnc_printf;
+    };
   };
   default {
     // Unknown command
