@@ -16,7 +16,7 @@ private _commandLineStorage = _target getVariable ["HKX_varTerminal_commandLineS
 private _commandLineInput = _target getVariable ["HKX_varTerminal_commandLineInput", ""]; // Stores the command that the player is typing.
 private _files = _target getVariable ["HKX_varTerminal_files",
   [
-    ["password.txt", 0, "Good job, soldier.\n\nYou may no log into the root account using the following password: password."],
+    ["password.txt", 0, "Good job, soldier.\n\nYou may now log into the root account using the following password: password."],
     ["goodjob.txt", 7, "Well done! You now have full control over this computer!"]
   ]
 ];
