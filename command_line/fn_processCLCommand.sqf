@@ -15,10 +15,6 @@ switch (_cmd) do {
   case "man";
   case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
   case "uname": {[_terminal, "Linux 4.2.27-23-generic-pae"] call HKX_fnc_printf;};
-  case "trigger": {
-    (_terminal select 0) setVariable ["HKX_trigger", true];
-    [_terminal, "Successfully toggled on Switch #42251."] call HKX_fnc_printf;
-  };
   case "clear": {
     _terminal set [5, ""]; // Clear the display
     [_terminal] call HKX_fnc_updateCLDisplay;
