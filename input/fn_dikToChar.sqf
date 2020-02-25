@@ -7,7 +7,7 @@ switch(_dikCode) do {
   case 1: {_char = "@ESC";};
   case 14: {_char = "@BACKSPACE";};
   //case 15: {_char = "@TAB";}; // Tab = 4 spaces
-  case 28: {_char = "@ENTER";};
+  case 28;
   case 156: {_char = "@ENTER";};
 
   // Special characters
