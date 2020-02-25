@@ -38,5 +38,6 @@ class HackEX {
     file = "HackEX\file";
 
     class openFile {};
+    class existsFile {};
   }
 }

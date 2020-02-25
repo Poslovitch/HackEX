@@ -73,7 +73,11 @@ switch (_cmd) do {
   };
   case "cat": {
     if (count _params == 1) then {
-      [_terminal, _params select 0] call HKX_fnc_openFile;
+      if ([_terminal, _params select 0] call HKX_fnc_existsFile) then {
+        [_terminal, _params select 0] call HKX_fnc_openFile;
+      } else {
+        [_terminal, "Error: Unknown file."] call HKX_fnc_printf;
+      };
     } else {
       [_terminal, "Error: Please provide a file name."] call HKX_fnc_printf;
     };
