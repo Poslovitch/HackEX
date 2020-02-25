@@ -1,14 +1,20 @@
 params["_terminal"];
 
-private _input = _terminal select 6;
-_input = toLower _input;
+private _input = _terminal select 7;
+
+// Add the command to the history
+(_terminal select 6) pushBackUnique _input;
+
+// Make it an array to separate the command and the params
 _input = _input splitString " ";
-private _cmd = _input select 0;
+private _cmd = toLower (_input select 0);
+
 _input deleteAt 0;
 private _params = _input;
 
-_terminal set [6, ""]; // Reset the command line
+_terminal set [7, ""]; // Reset the command line
 
+// Handle the command
 switch (_cmd) do {
   case "?";
   case "h";
@@ -59,7 +65,7 @@ switch (_cmd) do {
     };
   };
   case "ls": {
-    _files = _terminal select 7;
+    _files = _terminal select 8;
     _accounts = _terminal select 2;
     private _account = _accounts select (_accounts findIf {(_x select 0) == (_terminal select 3)}); // Get the account the user is trying to log into.
     private _accountClearance = _account select 2;

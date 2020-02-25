@@ -4,7 +4,7 @@ openedTerminals = [_terminal];
 publicVariableServer "openedTerminals";
 
 private _lines = (_terminal select 5) splitString endl; // We split the text based on \n or \r.
-_lines pushBack ((_terminal select 3) + "@" + (_terminal select 1) + "> " + (_terminal select 6) + "_");
+_lines pushBack ((_terminal select 3) + "@" + (_terminal select 1) + "> " + (_terminal select 7) + "_");
 
 while {(count _lines) > 45} do {                    // TODO: calculer un nombre de lignes
   _lines deleteAt 0;

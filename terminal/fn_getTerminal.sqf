@@ -13,7 +13,8 @@ private _registeredAccounts = _target getVariable ["HKX_varTerminal_registeredAc
 private _currentAccount = _target getVariable ["HKX_varTerminal_currentAccount", ""];        // User logged in (username or empty if none is logged in).
 private _name = _target getVariable ["HKX_varTerminal_name", "corpcmp_" + str round (random 99999)]; // Name of the terminal (used in display).
 private _state = "COMMAND_LINE";
-private _commandLineStorage = _target getVariable ["HKX_varTerminal_commandLineStorage", ""]; // Content displayed by the terminal in COMMAND_LINE mode.
+private _commandLineDisplay = _target getVariable ["HKX_varTerminal_commandLineDisplay", ""]; // Content displayed by the terminal in COMMAND_LINE mode.
+private _commandLineHistory = _target getVariable ["HKX_varterminal_commandLineHistory", []]; // Commands that were previously typed.
 private _commandLineInput = _target getVariable ["HKX_varTerminal_commandLineInput", ""]; // Stores the command that the player is typing.
 private _files = _target getVariable ["HKX_varTerminal_files", _defaultValues select 1];
 
@@ -23,7 +24,8 @@ private _files = _target getVariable ["HKX_varTerminal_files", _defaultValues se
   _registeredAccounts,
   _currentAccount,
   _state,
-  _commandLineStorage,
+  _commandLineDisplay,
+  _commandLineHistory,
   _commandLineInput,
   _files
 ];

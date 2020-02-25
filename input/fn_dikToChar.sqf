@@ -9,6 +9,8 @@ switch(_dikCode) do {
   //case 15: {_char = "@TAB";}; // Tab = 4 spaces
   case 28;
   case 156: {_char = "@ENTER";};
+  case 200: {_char = "@ARROW_UP";};
+  case 208: {_char = "@ARROW_DOWN";};
 
   // Special characters
   case 2: {
