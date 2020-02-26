@@ -1,4 +1,4 @@
-# HackEx version 0.0.4-dev
+# HackEx version 0.0.4
 
 ## Installation
 
