@@ -28,8 +28,8 @@ _accounts = [
       - requiredClearanceLevel (Integer): the minimum clearance level required in order to see and read the file.
       - text (String): the contents of the file.
 
-    NOTE: 'filename must not contain characters that require using the 'Alt Gr' key.
-          Those characters cannot be typed into the terminal interface, therefore preventing players reading the file.
+    NOTE: 'filename' must not contain characters that require using the 'Alt Gr' key.
+          Those characters cannot be typed into the terminal interface, therefore preventing players from accessing the file.
 */
 _files = [
   ["password.txt", 0, "Good job, soldier.\n\nYou may now log into the root account using the following password: password."],
