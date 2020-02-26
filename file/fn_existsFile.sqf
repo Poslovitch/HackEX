@@ -1,6 +1,2 @@
 params["_terminal", "_filename"];
-_files = _terminal select 8;
-
-private _index = _files findIf {_x select 0 == _filename};
-
-_index != -1;
+_terminal select 8 findIf {_x select 0 == _filename} != -1;
