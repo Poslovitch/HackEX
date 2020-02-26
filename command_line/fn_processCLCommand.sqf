@@ -17,8 +17,8 @@ _terminal set [7, ""]; // Reset the command line
 // Get user's clearance
 private _user = _terminal select 3;
 _accounts = _terminal select 2;
-_index = _accounts findIf {(_x select 0) == _user};
-private _userClearance = _accounts select _index select 2;
+_i = _accounts findIf {(_x select 0) == _user};
+private _userClearance = _accounts select _i select 2;
 
 // Handle the command
 scopeName "main";
@@ -73,12 +73,9 @@ switch (_cmd) do {
   };
   case "ls": {
     _files = _terminal select 8;
-    _accounts = _terminal select 2;
-    private _account = _accounts select (_accounts findIf {(_x select 0) == (_terminal select 3)}); // Get the account the user is trying to log into.
-    private _accountClearance = _account select 2;
     {
       _fileClearance = _x select 1;
-      if (_accountClearance >= _fileClearance) then {
+      if (_userClearance >= _fileClearance) then {
         _name = _x select 0;
         [_terminal, _name] call HKX_fnc_printf;
       };
@@ -87,7 +84,12 @@ switch (_cmd) do {
   case "cat": {
     if (count _params == 1) then {
       if ([_terminal, _params select 0] call HKX_fnc_existsFile) then {
-        [_terminal, _params select 0] call HKX_fnc_openFile;
+        _fileClearance = _terminal select 8 select (_terminal select 8 findIf {_x select 0 == _params select 0}) select 1;
+        if (_userClearance >= _fileClearance) then {
+          [_terminal, _params select 0] call HKX_fnc_openFile;
+        } else {
+          [_terminal, "Error: Insufficient permission to read this file."] call HKX_fnc_printf;
+        };
       } else {
         [_terminal, "Error: Unknown file."] call HKX_fnc_printf;
       };
