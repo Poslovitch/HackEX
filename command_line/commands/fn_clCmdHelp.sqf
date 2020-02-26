@@ -4,12 +4,13 @@
 */
 params["_terminal"];
 
-_user = _terminal select 3;
+private _user = _terminal select 3;
 _accounts = _terminal select 2;
 
 _index = _accounts findIf {(_x select 0) == _user};
+private _userClearance = _accounts select _index select 2;
 
-[_terminal, "Available commands [CLEARANCE LEVEL " + str (_accounts select _index select 2) + "]:"] call HKX_fnc_printf;
+[_terminal, "Available commands [CLEARANCE LEVEL " + str _userClearance + "]:"] call HKX_fnc_printf;
 [_terminal, "  - HELP: displays available commands"] call HKX_fnc_printf;
 [_terminal, "  - MAN: displays available commands"] call HKX_fnc_printf;
 [_terminal, "  - LOGIN <username> <password>: logs in the account"] call HKX_fnc_printf;
@@ -18,3 +19,37 @@ _index = _accounts findIf {(_x select 0) == _user};
 [_terminal, "  - CLEAR: clears the screen"] call HKX_fnc_printf;
 [_terminal, "  - LS: lists files in the current directory"] call HKX_fnc_printf;
 [_terminal, "  - CAT <filename>: opens the specified file"] call HKX_fnc_printf;
+
+_customCommands = _terminal select 9;
+
+{
+  _names = [_x select 0];
+  _names append (_x select 1);
+  _params = _x select 2;
+  _clearance = _x select 3;
+  _description = _x select 4;
+
+  private _parameters = "";
+  // Parse the parameters
+  {
+    _name = _x select 0;
+    _mandatory = _x select 1;
+
+    private _startChar = "[";
+    private _endChar = "]";
+    if (_mandatory) then {
+      _startChar = "<";
+      _endChar = ">";
+    };
+
+    _parameters = _parameters + " " + _startChar + _name + _endChar;
+  } forEach _params;
+
+  // Display the command
+  {
+    _name = toUpper _x;
+    if (_userClearance >= _clearance) then {
+      [_terminal, "  - " + _name + _parameters + ": " + _description] call HKX_fnc_printf;
+    };
+  } forEach _names;
+} forEach _customCommands;

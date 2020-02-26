@@ -17,6 +17,7 @@ private _commandLineDisplay = _target getVariable ["HKX_varTerminal_commandLineD
 private _commandLineHistory = _target getVariable ["HKX_varterminal_commandLineHistory", []]; // Commands that were previously typed.
 private _commandLineInput = _target getVariable ["HKX_varTerminal_commandLineInput", ""]; // Stores the command that the player is typing.
 private _files = _target getVariable ["HKX_varTerminal_files", _defaultValues select 1];
+private _customCommands = _target getVariable ["HKX_varTerminal_customCommands", _defaultValues select 2];
 
 [
   _target,
@@ -27,5 +28,6 @@ private _files = _target getVariable ["HKX_varTerminal_files", _defaultValues se
   _commandLineDisplay,
   _commandLineHistory,
   _commandLineInput,
-  _files
+  _files,
+  _customCommands
 ];

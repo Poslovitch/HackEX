@@ -36,5 +36,34 @@ _files = [
   ["goodjob.txt", 7, "Well done! You now have full control over this computer!"]
 ];
 
+/*
+  COMMANDS
+  Defines custom commands that are available in the terminal.
+  Players will be able to see these commands in the HELP and to use them, provided that the clearance level of the account they are logged into is high enough.
+
+  FORMAT:
+    [name, aliases, parameters, requiredClearanceLevel, description, code]
+    - name (String): the name of the command
+    - aliases (Array of Strings): the aliases of the command, i.e. alternative command names.
+    - parameters (Array of Parameters):
+      [name, isMandatory]
+      - name (String): the name of the parameter
+      - isMandatory (Boolean): /!\ Not implemented yet
+    - requiredClearanceLevel (Integer): the minimum clearance level required in order to see and use the command.
+    - description (String): the description of the command (shown in the HELP).
+    - code (Code): the code to execute when the command is entered.
+      Passed arguments are the following:
+      [terminal, params]
+        - terminal (Terminal): array containing the terminal's data.
+        - params (Array of Strings): array containing the parameters provided by the player.
+
+    NOTE: 'name' and 'aliases' must not contain characters that require using the 'Alt Gr' key.
+          Those characters cannot be typed into the terminal interface, therefore preventing players from entering the command.
+*/
+_customCommands = [
+  ["testcustom", ["alias"], [["param1", true], ["param2", false]], 0, "command description", {params["_terminal", "_params"]; [_terminal, "Test successful."] call HKX_fnc_printf;}],
+  ["testpsl", [], [], 1, "command for poslovitch", {params["_terminal", "_params"]; [_terminal, "At least you are Poslovitch..."] call HKX_fnc_printf;}]
+];
+
 // DO NOT REMOVE THIS LINE.
-[_accounts, _files];
+[_accounts, _files, _customCommands];
