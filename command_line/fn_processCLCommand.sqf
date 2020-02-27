@@ -29,7 +29,7 @@ switch (_cmd) do {
   case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
   case "uname": {[_terminal, "Linux 4.2.27-23-generic-pae"] call HKX_fnc_printf;};
   case "clear": {
-    _terminal set [5, ""]; // Clear the display
+    _terminal set [5, []]; // Clear the display
     [_terminal] call HKX_fnc_updateCLDisplay;
   };
   case "su";
@@ -47,7 +47,7 @@ switch (_cmd) do {
         if ((_terminal select 3) != (_account select 0)) then { // Make sure the account is different from the current one.
           _pwd = _account select 1;
           if (_password == _pwd) then {
-            _terminal set [5, ""]; // Clear the display
+            _terminal set [5, []]; // Clear the display
             _terminal set [3, _account select 0];
             [_terminal, "Logged in as " + _username + "."] call HKX_fnc_printf;
           } else {
@@ -65,7 +65,7 @@ switch (_cmd) do {
   case "logout": {
     _currentAccount = _terminal select 3;
     if (!("guest" in _currentAccount)) then {
-      _terminal set [5, ""]; // Clear the display
+      _terminal set [5, []]; // Clear the display
       [_terminal] call HKX_fnc_initCLSession;
     } else {
       [_terminal, "Error: Not logged into any account."] call HKX_fnc_printf;
