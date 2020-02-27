@@ -19,7 +19,7 @@ private _terminal = [_target] call HKX_fnc_getTerminal;
 sleep 0.3; // TODO: faire une fonction qui se charge au onLoad du dialogue pour mettre le texte
 
 // init the CL session if nothing happened so far, otherwise display previous data
-if ((_terminal select 5) == "") then {
+if ((_terminal select 5) isEqualTo []) then {
   [_terminal] call HKX_fnc_initCLSession;
 } else {
   [_terminal] call HKX_fnc_updateCLDisplay;
