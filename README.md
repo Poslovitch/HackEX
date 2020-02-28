@@ -15,7 +15,7 @@ This project is developed and maintained by [Poslovitch](https://github.com/Posl
 #### Download
 
 **HackEx** is currently only available on GitHub.
-You can either [get the most recent version](https://github.com/Poslovitch/HackEX/releases/latest) or browse the [`Releases`] tab (https://github.com/Poslovitch/HackEX/releases) to choose an older version.
+You can either [get the most recent version](https://github.com/Poslovitch/HackEX/releases/latest) or browse the [`Releases`](https://github.com/Poslovitch/HackEX/releases) tab to choose an older version.
 Download the source code archive (in `.zip` or `.tar.gz` format, depending on your preference).
 
 #### Installation
