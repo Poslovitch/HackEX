@@ -23,7 +23,7 @@ Download the source code archive (in `.zip` or `.tar.gz` format, depending on yo
 Extract the contents of the archive into your mission folder and rename the resulting folder to `HackEX`.
 If you later want to check the version of your HackEX installation, you can check the first line of the `README.md` file.
 
-Then, add the code below your mission's `description.ext` file:
+Then, add the code below to your mission's `description.ext` file:
 ```
 #include "HackEX\terminal\dialog.hpp"
 
