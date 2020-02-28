@@ -50,7 +50,7 @@ Add the following line to the `init.sqf` file of your mission:
 Navigate to the `HackEX\config\terminals` directory.
 A terminal configuration file, named `terminal.sqf`, is already there as an example.
 Since, in our example, the variable name of our object is `terminal`, this file will be used to configure the corresponding in-game object.
-In case the variable name of your object is different, create a `variablename.sqf' file and copy the contents of `terminal.sqf' into it.
+In case the variable name of your object is different, create a `variablename.sqf` file and copy the contents of `terminal.sqf` into it.
 
 The terminal configuration file allows you to define the **accounts**, **files** and **custom commands** available on the terminal.
 Apart from the limits imposed by the ArmA 3 game engine, you are free to create as many accounts, files and custom commands as you wish.
@@ -59,8 +59,6 @@ Apart from the limits imposed by the ArmA 3 game engine, you are free to create 
 
 The process is the same as for the first terminal.
 You need to place a second object with a different variable name than the first, and then follow the instructions in the previous section.
-
-Translated with www.DeepL.com/Translator (free version)
 
 ## French / Français
 
