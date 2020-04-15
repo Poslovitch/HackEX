@@ -15,7 +15,6 @@ private _userClearance = _accounts select _index select 2;
 [_terminal, "  - MAN: displays available commands"] call HKX_fnc_printf;
 [_terminal, "  - LOGIN <username> <password>: logs in the account"] call HKX_fnc_printf;
 [_terminal, "  - LOGOUT: logs out of the account and creates a new guest session"] call HKX_fnc_printf;
-[_terminal, "  - UNAME: displays Linux Kernel version information"] call HKX_fnc_printf;
 [_terminal, "  - CLEAR: clears the screen"] call HKX_fnc_printf;
 [_terminal, "  - LS: lists files in the current directory"] call HKX_fnc_printf;
 [_terminal, "  - CAT <filename>: opens the specified file"] call HKX_fnc_printf;

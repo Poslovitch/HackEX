@@ -27,7 +27,6 @@ switch (_cmd) do {
   case "h";
   case "man";
   case "help": {[_terminal] call HKX_fnc_clCmdHelp;};
-  case "uname": {[_terminal, "Linux 4.2.27-23-generic-pae"] call HKX_fnc_printf;};
   case "clear": {
     _terminal set [5, []]; // Clear the display
     [_terminal] call HKX_fnc_updateCLDisplay;
