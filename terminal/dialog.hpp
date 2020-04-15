@@ -9,7 +9,7 @@ class Terminal {
   movingEnable = false;
   name = "Terminal";
   controlsBackground[] = { TerminalBackground };
-	controls[] = { TerminalText };
+	controls[] = { TerminalText, TerminalInput };
 
   class TerminalBackground {
     idc = -1;
@@ -40,6 +40,22 @@ class Terminal {
     x = safezoneX + 0.11 * safezoneW;
     y = safezoneY + 0.11 * safezoneH;
     w = safezoneW * 0.78;
-    h = safezoneH * 0.78;
+    h = safezoneH * 0.73;
+  };
+
+  class TerminalInput {
+    idc = 2;
+    type = CT_STATIC;
+    style = ST_MULTI;
+		colorBackground[] = COLOR_TRANSPARENT;
+		colorText[] = COLOR_GREEN;
+    font = "EtelkaMonospacePro";
+    sizeEx = safezoneH * 0.015;
+		text = "";
+		lineSpacing = 1;
+    x = safezoneX + 0.11 * safezoneW;
+    y = safezoneY + (0.11 + 0.73 + 0.01) * safezoneH;
+    w = safezoneW * 0.78;
+    h = safezoneH * 0.02;
   };
 };
