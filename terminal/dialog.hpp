@@ -39,7 +39,7 @@ class Terminal {
 		lineSpacing = 1;
     x = safezoneX + 0.11 * safezoneW;
     y = safezoneY + 0.11 * safezoneH;
-    w = safezoneW * 0.85 - (0.07 * safezoneW);
-    h = safezoneH * 0.85 - (0.07 * safezoneH);
+    w = safezoneW * 0.78;
+    h = safezoneH * 0.78;
   };
 };
