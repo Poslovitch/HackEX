@@ -1,5 +1,6 @@
 #define COLOR_GREEN {0.3, 0.6, 0.4, 0.9}
-#define COLOR_HALF_BLACK { 0, 0, 0, 0.9 }
+#define COLOR_SEE_THROUGH_BLACK { 0, 0, 0, 0.9 }
+#define COLOR_SOLID_GRAY { 0.3, 0.3, 0.3, 0.98 }
 #define COLOR_TRANSPARENT { 0, 0, 0, 0 }
 #define ST_MULTI 16
 #define CT_STATIC 0
@@ -8,14 +9,14 @@ class Terminal {
   idd = 42001;
   movingEnable = false;
   name = "Terminal";
-  controlsBackground[] = { TerminalBackground };
+  controlsBackground[] = { TerminalBackground, TerminalButtonsBackground };
 	controls[] = { TerminalText, TerminalInput };
 
   class TerminalBackground {
     idc = -1;
     type = CT_STATIC;
     style = ST_MULTI;
-    colorBackground[] = COLOR_HALF_BLACK;
+    colorBackground[] = COLOR_SEE_THROUGH_BLACK;
     colorText[] = COLOR_TRANSPARENT;
     font = "EtelkaMonospacePro";
     sizeEx = 1;
@@ -58,4 +59,20 @@ class Terminal {
     w = safezoneW * 0.78;
     h = safezoneH * 0.02;
   };
+
+  class TerminalButtonsBackground {
+    idc = -1;
+    type = CT_STATIC;
+    style = ST_MULTI;
+    colorBackground[] = COLOR_SOLID_GRAY;
+    colorText[] = COLOR_TRANSPARENT;
+    font = "EtelkaMonospacePro";
+    sizeEx = 1;
+    lineSpacing = 1;
+    text = "";
+    x = safezoneX + 0.1 * safezoneW;
+    y = safezoneY + (0.1 + 0.8) * safezoneH;
+    w = safezoneW * 0.8;
+    h = safezoneH * 0.02;
+  }
 };
