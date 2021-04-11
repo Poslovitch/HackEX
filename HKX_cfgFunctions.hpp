@@ -23,21 +23,28 @@ class HackEX {
   };
 
   class CommandLineCommand {
-    file = "HackEX\command_line\commands"
+    file = "HackEX\command_line\commands";
 
     class clCmdHelp {};
+    class clCmdRun {};
   };
 
   class Input {
     file = "HackEX\input";
 
     class dikToChar {};
-  }
+  };
 
   class File {
     file = "HackEX\file";
 
     class openFile {};
     class existsFile {};
-  }
-}
+  };
+
+  class AppPowerPlant {
+    file = "HackEX\apps\powerplant";
+
+    class appPowerPlant{};
+  };
+};

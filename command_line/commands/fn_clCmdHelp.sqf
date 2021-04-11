@@ -18,6 +18,7 @@ private _userClearance = _accounts select _index select 2;
 [_terminal, "  - CLEAR: clears the screen"] call HKX_fnc_printf;
 [_terminal, "  - LS: lists files in the current directory"] call HKX_fnc_printf;
 [_terminal, "  - CAT <filename>: opens the specified file"] call HKX_fnc_printf;
+[_terminal, "  - RUN <app>: launches an app"] call HKX_fnc_printf;
 
 _customCommands = _terminal select 9;
 

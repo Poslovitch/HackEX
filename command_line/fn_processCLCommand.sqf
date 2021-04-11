@@ -96,6 +96,7 @@ switch (_cmd) do {
       [_terminal, "Error: Please provide a file name."] call HKX_fnc_printf;
     };
   };
+  case "run": {[_terminal, _params] call HKX_fnc_clCmdRun;};
   default {
     // Custom commands
     _customCommands = _terminal select 9;
