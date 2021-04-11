@@ -1,4 +1,4 @@
-#include "dialogDefines.hpp"
+#include "..\dialogDefines.hpp"
 
 class Terminal {
   idd = 42001;
