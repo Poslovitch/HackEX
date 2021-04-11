@@ -1,6 +1,6 @@
 params["_terminal", "_text"];
 
-_lines = _terminal get "clDisplay";
+private _lines = _terminal get "clDisplay";
 
 private _lastIndex = 0;
 if ((count _lines) > 0) then {
