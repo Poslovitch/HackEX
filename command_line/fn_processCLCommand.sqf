@@ -97,6 +97,7 @@ switch (_cmd) do {
     };
   };
   case "run": {[_terminal, _params] call HKX_fnc_clCmdRun;};
+  case "shutdown": {[_terminal] call HKX_fnc_shutdownTerminal;};
   default {
     // Custom commands
     _customCommands = _terminal get "customCommands";

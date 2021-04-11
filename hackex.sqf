@@ -6,7 +6,7 @@
 // [terminal] execVM "hackex.sqf"
 
 _terminal = _this select 0;
-_terminal call HKX_fnc_addActionTerminal;
+[_terminal] call HKX_fnc_addActionTerminal;
 
 /*
    openedTerminals

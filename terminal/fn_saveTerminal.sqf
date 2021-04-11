@@ -11,7 +11,8 @@ _vars = [
   "clHistory",
   "clInput",
   "files",
-  "customCommands"
+  "customCommands",
+  "actionID"
 ];
 
 {

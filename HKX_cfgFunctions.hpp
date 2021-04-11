@@ -6,9 +6,11 @@ class HackEX {
 
     class getTerminal {};
     class addActionTerminal {};
+    class bootTerminal {};
     class openTerminal {};
     class closeTerminal {};
     class saveTerminal {};
+    class shutdownTerminal {};
   };
 
   class CommandLine {
