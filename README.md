@@ -12,6 +12,10 @@ This project is developed and maintained by [Poslovitch](https://github.com/Posl
 
 ### Using the script in your mission...
 
+#### Requirements
+
+**This script requires Arma 3 v2.02 and later**, as it uses some of the newest features implemented in the SQF script language.
+
 #### Download
 
 **HackEx** is currently only available on GitHub.
@@ -69,6 +73,10 @@ You need to place a second object with a different variable name than the first,
 Ce projet est développé et maintenu par [Poslovitch](https://github.com/Poslovitch) avec l'aimable soutien de la [CORP](https://www.corp-arma.fr/), une unité ArmA 3 française axée sur le milsim et le réalisme.
 
 ### Utiliser le script dans votre mission...
+
+#### Pré-requis
+
+Ce script nécessite **Arma 3 version 2.02 ou plus récente**, car il utilise des nouvelles fonctionnalités implémentées dans le langage SQF.
 
 #### Téléchargement
 

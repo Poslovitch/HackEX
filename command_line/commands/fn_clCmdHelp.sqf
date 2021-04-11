@@ -4,8 +4,8 @@
 */
 params["_terminal"];
 
-private _user = _terminal select 3;
-_accounts = _terminal select 2;
+private _user = _terminal get "currentAccount";
+_accounts = _terminal get "accounts";
 
 _index = _accounts findIf {(_x select 0) == _user};
 private _userClearance = _accounts select _index select 2;
@@ -20,7 +20,7 @@ private _userClearance = _accounts select _index select 2;
 [_terminal, "  - CAT <filename>: opens the specified file"] call HKX_fnc_printf;
 [_terminal, "  - RUN <app>: launches an app"] call HKX_fnc_printf;
 
-_customCommands = _terminal select 9;
+_customCommands = _terminal get "customCommands";
 
 {
   _names = [_x select 0];

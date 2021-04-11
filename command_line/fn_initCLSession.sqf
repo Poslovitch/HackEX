@@ -2,8 +2,8 @@ params["_terminal"];
 
 _guest = "guest" + str round (random 9999);
 
-(_terminal select 2) pushBack [_guest, "", 0]; // Create a guest account
-_terminal set [3, _guest]; // Set it as the user
+(_terminal get "accounts") pushBack [_guest, "", 0]; // Create a guest account
+_terminal set ["currentAccount", _guest]; // Set it as the user
 
 [_terminal, "***************************************" + endl
           + "  No active session found." + endl
