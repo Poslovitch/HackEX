@@ -1,13 +1,14 @@
 /**
  * Boots up the Terminal
  */
-params["_terminal"];
+params["_target"];
 
+private _terminal = [_target] call HKX_fnc_getTerminal;
 private _state = _terminal get "state";
 
 if (_state == "SHUTDOWN") then {
   // Only do something if the terminal is not already shut down
   _terminal set ["state", "COMMAND_LINE"];
 
-  [_terminal get "object", _terminal, true] call HKX_fnc_addActionTerminal; // Call this function to replace the addAction
+  [_target, _terminal, true] call HKX_fnc_addActionTerminal; // Call this function to replace the addAction
 };
