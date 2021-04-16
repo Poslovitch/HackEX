@@ -5,12 +5,12 @@
  */
 params["_terminal"];
 
-private _state = _terminal get "state";
+private _poweredOn = _terminal get "poweredOn";
 
-if (!(_state == "SHUTDOWN")) then {
+if (_poweredOn) then {
   // Only do something if the terminal is not already shut down
-  _terminal set ["state", "SHUTDOWN"];
-  
+  _terminal set ["poweredOn", false];
+
   // TODO : logout the current account
   [_terminal] call HKX_fnc_closeTerminal; // Close the terminal
 };

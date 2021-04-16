@@ -29,5 +29,6 @@ createHashMapFromArray [
   ["clHistory", _commandLineHistory],
   ["clInput", _commandLineInput],
   ["files", _files],
-  ["customCommands", _customCommands]
+  ["customCommands", _customCommands],
+  ["poweredOn", true]
 ];

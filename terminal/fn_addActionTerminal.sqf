@@ -13,12 +13,12 @@ params ["_object", ["_terminal", createHashMap]];
 
 private _duration = 2;
 
-private _state = "UNKNOWN";
-if (count _terminal > 0) then { // if the hasmap is not empty
-  _state = _terminal get "state";
+private _poweredOn = true;
+if (count _terminal > 0) then { // if the hashmap is not empty
+  _poweredOn = _terminal get "poweredOn";
 };
 
-if (_state == "SHUTDOWN") then {
+if (!_poweredOn) then {
   [
     _object,
     "Allumer l'ordinateur",

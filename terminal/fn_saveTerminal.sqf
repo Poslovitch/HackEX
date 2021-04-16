@@ -12,6 +12,7 @@ _vars = [
   "clInput",
   "files",
   "customCommands",
+  "poweredOn"
 ];
 
 {
