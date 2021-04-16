@@ -3,7 +3,7 @@
 
     PARAMETERS:
       0 (Mandatory):
-        ARRAY - the terminal.
+        HASHMAP - the terminal.
       1 (Mandatory):
         STRING - the name of the file to open.
 
