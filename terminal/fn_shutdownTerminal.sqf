@@ -10,9 +10,7 @@ private _state = _terminal get "state";
 if (!(_state == "SHUTDOWN")) then {
   // Only do something if the terminal is not already shut down
   _terminal set ["state", "SHUTDOWN"];
-
-  [_terminal get "object", _terminal, true] call HKX_fnc_addActionTerminal; // Call this function to replace the addAction
-
+  
   // TODO : logout the current account
   [_terminal] call HKX_fnc_closeTerminal; // Close the terminal
 };

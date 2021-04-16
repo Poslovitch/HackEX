@@ -4,29 +4,22 @@
     PARAMETERS:
       0 (Mandatory):
         OBJECT - the object which the action is assigned to.
-      1 (Optional, default false):
-        BOOLEAN - true if the previous addAction on the Terminal should be removed.
+      1 (Optional):
+        HASHMAP - the terminal.
     RETURNS:
       Nothing.
  */
-params ["_object", ["_terminal", createHashMap], ["_removePreviousAction", false]];
+params ["_object", ["_terminal", createHashMap]];
 
-_duration = 2;
+private _duration = 2;
 
 private _state = "UNKNOWN";
-private _actionID = -1;
-
 if (count _terminal > 0) then { // if the hasmap is not empty
   _state = _terminal get "state";
-  _actionID = _terminal getOrDefault ["actionID", -1];
-};
-
-if (_removePreviousAction && _actionID != -1) then {
-  [_terminal, _actionID] remoteExec ["BIS_fnc_holdActionRemove", 0];
 };
 
 if (_state == "SHUTDOWN") then {
-  _actionID = [
+  [
     _object,
     "Allumer l'ordinateur",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
@@ -40,10 +33,10 @@ if (_state == "SHUTDOWN") then {
     [],
     _duration,
     0,
-    false  // We want to keep the action available even after completion
+    true  // We want to remove the action after completion
   ] remoteExec ["BIS_fnc_holdActionAdd", 0];
 } else {
-  _actionID = [
+  [
     _object,
     "Ouvrir le terminal",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
@@ -57,10 +50,6 @@ if (_state == "SHUTDOWN") then {
     [],
     _duration,
     0,
-    false  // We want to keep the action available even after completion
+    true  // We will readd the action whenever necessary
   ] remoteExec ["BIS_fnc_holdActionAdd", 0];
-};
-
-if (count _terminal > 0) then {
-  _terminal set["actionID", _actionID]; // Store the action ID to remove it later
 };

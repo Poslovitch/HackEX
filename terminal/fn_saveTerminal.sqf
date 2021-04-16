@@ -12,7 +12,6 @@ _vars = [
   "clInput",
   "files",
   "customCommands",
-  "actionID"
 ];
 
 {

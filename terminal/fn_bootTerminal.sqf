@@ -10,5 +10,5 @@ if (_state == "SHUTDOWN") then {
   // Only do something if the terminal is not already shut down
   _terminal set ["state", "COMMAND_LINE"];
 
-  [_target, _terminal, true] call HKX_fnc_addActionTerminal; // Call this function to replace the addAction
+  [_target, _terminal] call HKX_fnc_addActionTerminal; // Call this function to replace the addAction
 };
