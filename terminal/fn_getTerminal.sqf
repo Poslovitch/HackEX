@@ -18,6 +18,7 @@ private _commandLineHistory = _target getVariable ["HKX_terminal_clHistory", []]
 private _commandLineInput = _target getVariable ["HKX_terminal_clInput", ""]; // Stores the command that the player is typing.
 private _files = _target getVariable ["HKX_terminal_files", _defaultValues select 1];
 private _customCommands = _target getVariable ["HKX_terminal_customCommands", _defaultValues select 2];
+private _poweredOn = _target getVariable ["HKX_terminal_poweredOn", true];
 
 createHashMapFromArray [
   ["object", _target],
@@ -30,5 +31,5 @@ createHashMapFromArray [
   ["clInput", _commandLineInput],
   ["files", _files],
   ["customCommands", _customCommands],
-  ["poweredOn", true]
+  ["poweredOn", _poweredOn]
 ];
