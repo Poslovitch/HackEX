@@ -26,7 +26,7 @@ class Terminal {
   class TerminalText {
     idc = 1;
     type = CT_STATIC;
-    style = ST_MULTI;
+    style = ST_MULTI + ST_NO_RECT;
 		colorBackground[] = COLOR_TRANSPARENT;
 		colorText[] = COLOR_GREEN;
     font = "EtelkaMonospacePro";
@@ -42,7 +42,7 @@ class Terminal {
   class TerminalInput {
     idc = 2;
     type = CT_STATIC;
-    style = ST_MULTI;
+    style = ST_SINGLE;
 		colorBackground[] = COLOR_TRANSPARENT;
 		colorText[] = COLOR_GREEN;
     font = "EtelkaMonospacePro";
