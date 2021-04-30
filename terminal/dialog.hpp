@@ -11,16 +11,16 @@ class Terminal {
     idc = -1;
     type = CT_STATIC;
     style = ST_MULTI;
-    colorBackground[] = COLOR_SEE_THROUGH_BLACK;
+    colorBackground[] = COLOR_SOLID_BLACK;
     colorText[] = COLOR_TRANSPARENT;
     font = "EtelkaMonospacePro";
     sizeEx = 1;
     lineSpacing = 1;
     text = "";
-    x = safezoneX + 0.1 * safezoneW;
-    y = safezoneY + 0.1 * safezoneH;
-    w = safezoneW * 0.8;
-    h = safezoneH * 0.8;
+    x = safeZoneX;
+    y = safeZoneY;
+    w = safeZoneW;
+    h = safeZoneH;
   };
 
   class TerminalText {
