@@ -49,4 +49,10 @@ class HackEX {
 
     class appPowerPlant{};
   };
+
+  class AppTextViewer {
+    file = "HackEX\apps\textviewer";
+
+    class appFileViewer{};
+  }
 };

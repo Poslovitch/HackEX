@@ -6,3 +6,4 @@ import RscControlsGroupNoScrollbars;
 
 #include "terminal\dialog.hpp"
 #include "apps\powerplant\dialog.hpp"
+#include "apps\textviewer\dialog.hpp"
