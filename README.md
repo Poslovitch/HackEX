@@ -46,6 +46,8 @@ It's time to create **terminals**!
 By the method of your choice, place an object in your mission (preferably a laptop, for the sake of consistency - although **HackEX** can theoretically work with any object).
 Give your object a variable name.
 
+**/!\ DO NOT TURN THE OBJECT INTO A SIMPLE OBJECT**
+
 **/!\ For the rest of the instructions, we'll assume that the variable name of the object is `terminal`**.
 
 Add the following line to the `init.sqf` file of your mission:
@@ -107,6 +109,8 @@ Il est temps de créer des **terminaux** !
 
 Par la méthode de votre choix, placez un objet dans votre mission (de préférence un ordinateur portable, par soucis de cohérence - bien que **HackEX** puisse théoriquement fonctionner avec n'importe quel objet).
 Donnez un nom de variable à votre objet.
+
+**/!\ ASSUREZ-VOUS QUE L'OBJET N'EST PAS UN *OBJET SIMPLE*!**
 
 **/!\ Pour la suite des instructions, nous supposerons que le nom de variable de l'objet est `terminal`**.
 
