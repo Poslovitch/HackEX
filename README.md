@@ -29,7 +29,7 @@ If you later want to check the version of your HackEX installation, you can chec
 
 Then, add the code below to your mission's `description.ext` file:
 ```
-#include "HackEX\terminal\dialog.hpp"
+#include "HackEX\HKX_dialogs.hpp"
 
 class CfgFunctions {
   #include "HackEX\HKX_cfgFunctions.hpp"
@@ -93,7 +93,7 @@ Si, par la suite, vous voulez vérifier la version de votre installation de Hack
 
 Ensuite, ajoutez le code ci-dessous au fichier `description.ext` de votre mission :
 ```
-#include "HackEX\terminal\dialog.hpp"
+#include "HackEX\HKX_dialogs.hpp"
 
 class CfgFunctions {
   #include "HackEX\HKX_cfgFunctions.hpp"

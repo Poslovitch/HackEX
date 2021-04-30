@@ -1,1 +1,3 @@
-#include "..\..\dialogDefines.hpp"
+class PowerPlantHkxApp : HKX_Application {
+
+}

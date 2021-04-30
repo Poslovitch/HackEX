@@ -1,5 +1,3 @@
-#include "..\dialogDefines.hpp"
-
 class Terminal {
   idd = 42001;
   movingEnable = false;
@@ -10,7 +8,7 @@ class Terminal {
   class TerminalBackground {
     idc = -1;
     type = CT_STATIC;
-    style = ST_MULTI;
+    style = ST_SINGLE;
     colorBackground[] = COLOR_SOLID_BLACK;
     colorText[] = COLOR_TRANSPARENT;
     font = "EtelkaMonospacePro";
