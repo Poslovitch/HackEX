@@ -19,6 +19,7 @@ private _commandLineInput = _target getVariable ["HKX_terminal_clInput", ""]; //
 private _files = _target getVariable ["HKX_terminal_files", _defaultValues select 1];
 private _customCommands = _target getVariable ["HKX_terminal_customCommands", _defaultValues select 2];
 private _poweredOn = _target getVariable ["HKX_terminal_poweredOn", true];
+private _availableScreens = getObjectTextures _target;
 
 createHashMapFromArray [
   ["object", _target],
@@ -31,5 +32,6 @@ createHashMapFromArray [
   ["clInput", _commandLineInput],
   ["files", _files],
   ["customCommands", _customCommands],
-  ["poweredOn", _poweredOn]
+  ["poweredOn", _poweredOn],
+  ["availableScreens", _availableScreens]
 ];
