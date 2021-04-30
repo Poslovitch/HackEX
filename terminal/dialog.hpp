@@ -4,8 +4,8 @@ class Terminal {
   idd = 42001;
   movingEnable = false;
   name = "Terminal";
-  controlsBackground[] = { TerminalBackground, TerminalButtonsBackground };
-	controls[] = { TerminalText, TerminalInput };
+  controlsBackground[] = { TerminalBackground };
+	controls[] = { TerminalText, TerminalInput, TerminalButtonsBackground };
 
   class TerminalBackground {
     idc = -1;
