@@ -34,6 +34,10 @@ Then, add the code below to your mission's `description.ext` file:
 class CfgFunctions {
   #include "HackEX\HKX_cfgFunctions.hpp"
 }
+
+class CfgHints {
+  #include "HackEX\HKX_CfgHints.hpp"
+}
 ```
 
 If your `description.ext` already contains a `CfgFunctions` class, make sure you put the preprocessor instructions in the right place.
@@ -97,6 +101,10 @@ Ensuite, ajoutez le code ci-dessous au fichier `description.ext` de votre missio
 
 class CfgFunctions {
   #include "HackEX\HKX_cfgFunctions.hpp"
+}
+
+class CfgHints {
+  #include "HackEX\HKX_CfgHints.hpp"
 }
 ```
 
