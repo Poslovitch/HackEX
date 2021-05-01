@@ -2,6 +2,7 @@ params["_terminal", "_input"];
 
 switch(_input) do {
   case "@ENTER": {
+    if (count (_terminal get "clInput") == 0) exitWith {}; // Do nothing
     [_terminal, endl] call HKX_fnc_printf;
     [_terminal, (_terminal get "currentAccount") + "@" + (_terminal get "name") + "> " + (_terminal get "clInput")] call HKX_fnc_printf;
 
